@@ -5,7 +5,7 @@
 	"scripts": {
 		"start": "node ./test-bull-worker-reconnect.js",
 		"start-redis": "export USER_ID=\"$(id -u)\" && export GROUP_ID=\"$(id -g)\" && docker-compose up -d",
-		"stop-redis": "docker-compose down --log-level ERROR"
+		"stop-redis": "docker-compose --log-level ERROR -f docker-compose.yaml down"
 	},
 	"dependencies": {
 		"bullmq": "^5.7.13"
