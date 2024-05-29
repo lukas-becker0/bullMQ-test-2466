@@ -1,0 +1,17 @@
+{
+	"name": "bullMQ-test-2466",
+	"version": "0.0.1",
+	"author": "lukas-becker0",
+	"scripts": {
+		"start": "node ./test-bull-worker-reconnect.js",
+		"start-redis": "export USER_ID=\"$(id -u)\" && export GROUP_ID=\"$(id -g)\" && docker-compose up -d",
+		"stop-redis": "docker-compose down --log-level ERROR"
+	},
+	"dependencies": {
+		"bullmq": "^5.7.13"
+	},
+	"engines": {
+		"node": "^20.14.0",
+		"npm": "^10.7.0"
+	}
+}
